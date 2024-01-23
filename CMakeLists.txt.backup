@@ -59,7 +59,7 @@ ENDIF(WIN32)
 OPTION(BUILD_BENCHMARK "Build the benchmarks" OFF)
 OPTION(BUILD_UTILS "Build the utils" OFF)
 # 20240123 modified
-OPTION(BUILD_PYTHON_INTERFACE "Build the Python bindings" OFF)
+OPTION(BUILD_PYTHON_INTERFACE "Build the Python bindings" ON)
 option(GENERATE_PYTHON_STUBS "Generate the Python stubs associated to the Python library" OFF)
 OPTION(BUILD_WITH_COMMIT_VERSION "Build libraries by setting specific commit version" OFF)
 
@@ -289,20 +289,20 @@ LIST(APPEND HEADERS
 ADD_SUBDIRECTORY(src)
 
 # 20240123 modified
-# # --- BINDINGS -----------------------------------------------------------------
-# ADD_SUBDIRECTORY(bindings)
+# --- BINDINGS -----------------------------------------------------------------
+ADD_SUBDIRECTORY(bindings)
 
-# # --- EXECUTABLES --------------------------------------------------------------
-# ADD_SUBDIRECTORY(utils)
+# --- EXECUTABLES --------------------------------------------------------------
+ADD_SUBDIRECTORY(utils)
 
-# # --- UNIT TESTS ---------------------------------------------------------------
-# ADD_SUBDIRECTORY(unittest)
+# --- UNIT TESTS ---------------------------------------------------------------
+ADD_SUBDIRECTORY(unittest)
 
-# # --- CHECK EXAMPLES -----------------------------------------------------------
-# ADD_SUBDIRECTORY(examples)
+# --- CHECK EXAMPLES -----------------------------------------------------------
+ADD_SUBDIRECTORY(examples)
 
-# # --- BENCHMARKS ---------------------------------------------------------------
-# ADD_SUBDIRECTORY(benchmark)
+# --- BENCHMARKS ---------------------------------------------------------------
+ADD_SUBDIRECTORY(benchmark)
 
 
 # --- PACKAGING ----------------------------------------------------------------
